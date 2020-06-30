@@ -36,7 +36,15 @@ namespace ClassesDemoDay2ConsoleUI
         
         public void Withdraw(decimal amount)
         {
-            UserCheckingAccount.Balance -= amount;
+            
+            if (amount <= UserCheckingAccount.Balance)
+            {
+                UserCheckingAccount.Balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Transaction was terminated!!");
+            }
         }
         // saving Transactuions 
         public void SavingDeposit(decimal amount)
@@ -46,17 +54,32 @@ namespace ClassesDemoDay2ConsoleUI
 
         public void SavingWithdraw(decimal amount)
         {
-            UserSavingAccount.SavingBalance -= amount;
+            if (amount <= UserSavingAccount.SavingBalance)
+            {
+                UserSavingAccount.SavingBalance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Transaction was terminated!!");
+            }
         }
         //Credit Card Transactions
         public void CreditCardDeposit(decimal amount)
         {
             UserCreditCardAccount.CreditCardBalance += amount;
+
         }
 
         public void CreditCardWithdraw(decimal amount)
         {
-            UserCreditCardAccount.CreditCardBalance -= amount;
+            if (amount <= UserCreditCardAccount.CreditCardBalance)
+            {
+                UserCreditCardAccount.CreditCardBalance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Transaction was terminated!!");
+            }
         }
     }
 }

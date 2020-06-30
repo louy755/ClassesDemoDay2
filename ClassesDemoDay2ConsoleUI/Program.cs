@@ -55,7 +55,6 @@ namespace ClassesDemoDay2ConsoleUI
                         Console.WriteLine($"The owner of the account is: {checkingAccount.Owner.FirstName} {checkingAccount.Owner.LastName}");
                         Console.WriteLine($"Thank you for creting new checking account you have $ {checkingAccount.Balance}!!");
 
-                        //--------
                         //Asking user to deposit or withdraw
                         Console.WriteLine("Do you want to deposit or withdraw money?\n" +
                             "1- Depost\n" +
@@ -144,7 +143,7 @@ namespace ClassesDemoDay2ConsoleUI
                         customer1.UserCreditCardAccount = creditCardAccount;
 
                         //Printing the values of the Account
-                        Console.WriteLine($"Your Saving account number is: {creditCardAccount.CreditCardAccNm}");
+                        Console.WriteLine($"Your CreditCard account number is: {creditCardAccount.CreditCardAccNm}");
                         Console.WriteLine($"The owner of the account is: {creditCardAccount.CreditCardOwner.FirstName} {creditCardAccount.CreditCardOwner.LastName}");
                         Console.WriteLine($"Thank you to open the CreditCard account, you rewarded ${creditCardAccount.CreditCardBalance}");
 
