@@ -12,6 +12,9 @@ namespace ClassesDemoDay2ConsoleUI
         public int Age { get; set; }
         public bool IsApproved { get; set; }
         public CheckingAccount UserCheckingAccount { get; set; }
+        public SavingAccount UserSavingAccount { get; set; }
+        public CreditCardAccount UserCreditCardAccount { get; set; }
+
 
         //Default Ctor = Member
         public Customer()
@@ -25,7 +28,7 @@ namespace ClassesDemoDay2ConsoleUI
             FirstName = firstName;
             LastName = lastName;
         }
-
+        // Checking account transactions
         public void Deposit(decimal amount)
         {
             UserCheckingAccount.Balance += amount;
@@ -34,6 +37,26 @@ namespace ClassesDemoDay2ConsoleUI
         public void Withdraw(decimal amount)
         {
             UserCheckingAccount.Balance -= amount;
+        }
+        // saving Transactuions 
+        public void SavingDeposit(decimal amount)
+        {
+            UserSavingAccount.SavingBalance += amount;
+        }
+
+        public void SavingWithdraw(decimal amount)
+        {
+            UserSavingAccount.SavingBalance -= amount;
+        }
+        //Credit Card Transactions
+        public void CreditCardDeposit(decimal amount)
+        {
+            UserCreditCardAccount.CreditCardBalance += amount;
+        }
+
+        public void CreditCardWithdraw(decimal amount)
+        {
+            UserCreditCardAccount.CreditCardBalance -= amount;
         }
     }
 }
